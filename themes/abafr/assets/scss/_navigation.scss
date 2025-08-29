@@ -1,0 +1,447 @@
+// Navigation styles - Institutional Style
+// =======================================
+
+// Main navigation - Breadcrumb style come sito Accademia
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    
+    li {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      
+      &:not(:last-child)::after {
+        content: ">";
+        height: auto;
+        margin: 0 0.4rem; 
+        display: block;
+      }
+      
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: $font-size-sm;
+        font-weight: 400;
+        text-transform: lowercase;
+        transition: $transition-base;
+        
+        &:hover {
+          color: var(--primary-color);
+        }
+        
+        &.active {
+          color: var(--primary-color);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+// Tags navigation - More formal institutional style
+// Tags e Categories navigation - More formal institutional style
+.project-tags,
+.project-categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: map-get($spacers, 1);
+  
+  strong {
+    color: var(--text-primary);
+    margin-right: map-get($spacers, 2);
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .tag {
+    background: var(--primary-color);
+    color: white;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    border-radius: $border-radius-sm;
+    // font-size: $font-size-xs;
+    font-weight: 400; 
+    text-decoration: none;
+    transition: $transition-base; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    line-height: 1;
+    
+    &:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+  }
+  
+  .category {
+    background: var(--accent-color);
+    color: white;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    border-radius: $border-radius-sm;
+    font-weight: 500;
+    text-decoration: none;
+    transition: $transition-base;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--accent-color);
+    line-height: 1;
+    
+    &:hover {
+      background: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+  }
+}
+
+// Single project tags - More institutional spacing
+.project-single .project-tags {
+  // margin-top: map-get($spacers, 2); // Ridotto il margine superiore
+  margin-top: map-get($spacers, 1);
+  font-size: $font-size-lg; // Stessa dimensione del contenuto per l'etichetta
+  // margin-bottom: map-get($spacers, 1); // Spacing uguale alle altre informazioni
+  margin-bottom: 0; // Spacing uguale alle altre informazioni
+  line-height: 1.7; // Stessa interlinea del contenuto normale 
+  
+  strong {
+    font-weight: bold; // Ripristinato il grassetto per le etichette
+  }
+  
+  .tag {
+    background: #f5f5f5;
+    color: #333;
+    font-size: $font-size-lg; // Stessa dimensione del contenuto anche per i tag
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    margin: map-get($spacers, 1) map-get($spacers, 1) map-get($spacers, 1) 0;
+    border-radius: $border-radius-sm;
+    border: none;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+}
+
+// Card project tags
+.project-card .project-tags {
+  .tag {
+    background: var(--primary-color);
+    color: white;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    border-radius: $border-radius-sm;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    border: none;
+  }
+}
+
+// Filter tags - Stile discreto e minimalista
+.tag-link {
+  color: #666;
+  text-decoration: none;
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  border: none;
+  border-radius: $border-radius-sm;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: $transition-base;
+  font-size: $font-size-xs;
+  background: #f0f0f0;
+  font-weight: 400;
+  line-height: 1;
+  
+  &:hover {
+    background: #e0e0e0;
+    color: #555;
+  }
+  
+  &:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+  }
+}
+
+// Tag active state - Stile discreto per tag corrente
+.tag-link.tag-active {
+  background: #888 !important;
+  color: white !important;
+  font-weight: 500;
+  pointer-events: none;
+  cursor: default;
+  
+  // Override degli effetti hover per chiarire che non è interattivo
+  &:hover {
+    background: #888 !important;
+    color: white !important;
+  }
+}
+
+// Back navigation - More institutional
+.project-navigation {
+  text-align: center;
+  padding-top: map-get($spacers, 4);
+  border-top: 2px solid var(--border-light);
+  margin-top: map-get($spacers, 5);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  background: var(--primary-color);
+  color: white;
+  padding: map-get($spacers, 3) map-get($spacers, 4);
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-weight: 500;
+  transition: $transition-base;
+  border: 2px solid var(--primary-color);
+  
+  &:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  &:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  // Icon spacing
+  &::before {
+    content: '←';
+    margin-right: map-get($spacers, 1);
+    font-size: 1.1em;
+  }
+}
+
+// General link styles - Institutional
+.projects-intro a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: map-get($spacers, 2);
+  padding: map-get($spacers, 2) map-get($spacers, 3);
+  border: 2px solid var(--primary-color);
+  border-radius: $border-radius;
+  display: inline-block;
+  margin-bottom: map-get($spacers, 2);
+  transition: $transition-base;
+  background: var(--bg-primary);
+  font-weight: 500;
+  
+  &:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    margin: map-get($spacers, 1);
+  }
+}
+
+// Breadcrumb navigation - Institutional style
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: map-get($spacers, 2);
+  margin-bottom: map-get($spacers, 4);
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  padding: map-get($spacers, 2) 0;
+  border-bottom: 1px solid var(--border-light);
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .separator {
+    color: var(--text-muted);
+    font-weight: normal;
+    
+    &::before {
+      content: '›';
+      font-size: 1.2em;
+    }
+  }
+}
+
+// Filtro categorie semplificato senza box
+.category-filter-simple {
+  margin-bottom: map-get($spacers, 4);
+  
+  label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: map-get($spacers, 2);
+    font-size: $font-size-base;
+  }
+  
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: map-get($spacers, 2);
+  }
+}
+
+// Page title area - Institutional header
+.page-title {
+  background: linear-gradient(135deg, var(--bg-accent), var(--bg-secondary));
+  padding: map-get($spacers, 4) 0;
+  margin-bottom: map-get($spacers, 4);
+  border-bottom: 2px solid var(--primary-color);
+  
+  h1 {
+    margin: 0;
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: map-get($spacers, 2);
+    font-size: $font-size-lg;
+  }
+}
+
+// Focus states for accessibility - Institutional standard
+a:focus,
+button:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+// Link hover states
+a {
+  transition: $transition-base;
+}
+
+// Institutional footer-style navigation
+.institutional-nav {
+  background: var(--bg-secondary);
+  border-top: 2px solid var(--primary-color);
+  padding: map-get($spacers, 4) 0;
+  margin-top: map-get($spacers, 5);
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: map-get($spacers, 4);
+    flex-wrap: wrap;
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      padding: map-get($spacers, 1) 0;
+      border-bottom: 2px solid transparent;
+      
+      &:hover {
+        border-bottom-color: var(--primary-color);
+      }
+    }
+  }
+}
+
+// Container per i filtri affiancati
+.filters-container {
+  display: flex;
+  gap: map-get($spacers, 4);
+  margin-bottom: map-get($spacers, 4);
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    flex-direction: column;
+    gap: map-get($spacers, 3);
+  }
+}
+
+// Listbox per filtro temi e categorie
+.tags-filter-select,
+.categories-filter-select {
+  flex: 1;
+  min-width: 0; // Previene overflow
+  
+  label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: map-get($spacers, 2);
+    font-size: $font-size-base;
+  }
+  
+  .tema-listbox,
+  .tipologia-listbox {
+    width: 100%;
+    padding: map-get($spacers, 2) map-get($spacers, 2); 
+    border: 2px solid var(--border-light);
+    border-radius: $border-radius;
+    background: white;
+    font-size: $font-size-base;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: $transition-base;
+
+    // Personalizzazione freccia 
+    appearance: none;
+    -webkit-appearance: none;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right map-get($spacers, 2) center/1em 1em;
+    // padding-right: 2.5em; 
+    
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1);
+    }
+    
+    &:hover {
+      border-color: var(--primary-color);
+    }
+    
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      
+      &:hover {
+        border-color: var(--border-light);
+      }
+      
+      &:focus {
+        border-color: var(--border-light);
+        box-shadow: none;
+      }
+    }
+    
+    option {
+      padding: map-get($spacers, 1);
+      color: var(--text-primary);
+    }
+  }
+}
+
+// Utility classes per testare le opzioni
+.hide-listbox .tags-filter-select,
+.hide-listbox .categories-filter-select {
+  display: none;
+}
+
+.hide-buttons .tags-list {
+  display: none;
+}

@@ -1,0 +1,220 @@
+{{ define "main" }}
+<div class="projects-container">
+    <article class="projects-intro">
+        <!-- Filtri con listbox affiancate -->
+        <div class="filters-container">
+            <!-- Listbox per le tipologie -->
+            <div class="categories-filter-select">
+                <label for="tipologia-select">Filtra per tipologia:</label>
+                <select id="tipologia-select" class="tipologia-listbox">
+                    <option value="">Tutte le tipologie</option>
+                    {{ $allCategories := slice }}
+                    {{ range .Pages }}
+                        {{ range .Params.categories }}
+                            {{ $allCategories = $allCategories | append . }}
+                        {{ end }}
+                    {{ end }}
+                    {{ range ($allCategories | uniq | sort) }}
+                            <option value="{{ . }}">{{ . | title }}</option>
+                    {{ end }}
+                </select>
+            </div>
+
+            <!-- Listbox per i temi -->
+            <div class="tags-filter-select">
+                <label for="tema-select">Filtra per tema:</label>
+                <select id="tema-select" class="tema-listbox">
+                    <option value="">Tutti i temi</option>
+                    {{ $allTags := slice }}
+                    {{ range .Pages }}
+                        {{ range .Params.tags }}
+                            {{ $allTags = $allTags | append . }}
+                        {{ end }}
+                    {{ end }}
+                    {{ range ($allTags | uniq | sort) }}
+                            <option value="{{ . }}">{{ . | title }}</option>
+                    {{ end }}
+                </select>
+            </div>
+        </div>
+    </article>
+
+    <section class="projects-grid">
+        {{ range .Pages.ByDate.Reverse }}
+            {{ if .Params.studente }}
+                    <div class="project-card" 
+                         data-slug="{{ .File.BaseFileName }}"
+                         data-categories="{{ delimit .Params.categories "," }}"
+                         data-tags="{{ delimit .Params.tags "," }}">
+                <a href="{{ .RelPermalink }}" class="project-link">
+                    {{ if .Params.copertina }}
+                        <div class="project-image">
+                            <img src="{{ .RelPermalink }}{{ .Params.copertina }}" 
+                                 alt="{{ .Params.titolo }}" 
+                                 loading="lazy">
+                        </div>
+                    {{ end }}
+                    <div class="project-info">
+                        <h3 class="project-title">{{ .Params.titolo }}</h3>
+                        <p class="project-student">{{ .Params.studente }}</p>
+                        <p class="project-description">{{ .Params.descrizione }}</p>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        {{ end }}
+    </section>
+            <!-- Script JS per filtro locale con URL -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const tipologiaSelect = document.getElementById('tipologia-select');
+                const temaSelect = document.getElementById('tema-select');
+                
+                // Salva le opzioni originali
+                const tipologieOriginali = Array.from(tipologiaSelect.options);
+                const temiOriginali = Array.from(temaSelect.options);
+                
+                // Legge i parametri URL all'avvio
+                function caricaFiltriDaURL() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const tipo = urlParams.get('tipo');
+                    const tema = urlParams.get('tema');
+                    
+                    if (tipo) tipologiaSelect.value = tipo;
+                    if (tema) temaSelect.value = tema;
+                    
+                    aggiornaOpzioniDisponibili();
+                    filtraProgetti();
+                }
+                
+                // Aggiorna le opzioni disponibili in base al filtro corrente
+                function aggiornaOpzioniDisponibili() {
+                    const tipologiaCorrente = tipologiaSelect.value;
+                    const temaCorrente = temaSelect.value;
+                    
+                    // Trova tutti i progetti visibili con i filtri attuali
+                    const progettiVisibili = Array.from(document.querySelectorAll('.project-card')).filter(card => {
+                        const categories = card.getAttribute('data-categories')?.split(',') || [];
+                        const tags = card.getAttribute('data-tags')?.split(',') || [];
+                        
+                        let match = true;
+                        if (tipologiaCorrente && !categories.includes(tipologiaCorrente)) match = false;
+                        if (temaCorrente && !tags.includes(temaCorrente)) match = false;
+                        return match;
+                    });
+                    
+                    // Raccogli tipologie e temi disponibili
+                    const tipologieDisponibili = new Set();
+                    const temiDisponibili = new Set();
+                    
+                    progettiVisibili.forEach(card => {
+                        const categories = card.getAttribute('data-categories')?.split(',') || [];
+                        const tags = card.getAttribute('data-tags')?.split(',') || [];
+                        
+                        // Se il tema è indefinito (valore vuoto), mostra tutte le tipologie
+                        if (temaCorrente === '') {
+                            tipologieOriginali.slice(1).forEach(option => tipologieDisponibili.add(option.value));
+                        } else {
+                            // Se un tema è selezionato, mostra solo le tipologie che hanno quel tema
+                            if (tags.includes(temaCorrente)) {
+                                categories.forEach(cat => tipologieDisponibili.add(cat));
+                            }
+                        }
+                        
+                        // Se la tipologia è indefinita (valore vuoto), mostra tutti i temi
+                        if (tipologiaCorrente === '') {
+                            temiOriginali.slice(1).forEach(option => temiDisponibili.add(option.value));
+                        } else {
+                            // Se una tipologia è selezionata, mostra solo i temi di quella tipologia
+                            if (categories.includes(tipologiaCorrente)) {
+                                tags.forEach(tag => temiDisponibili.add(tag));
+                            }
+                        }
+                    });
+                    
+                    // Disabilita le listbox se rimane solo una card o nessuna, ma mantiene attiva quella con selezione
+                    const disabilitaTipologie = (progettiVisibili.length <= 1 || tipologieDisponibili.size <= 1) && !tipologiaCorrente;
+                    const disabilitaTemi = (progettiVisibili.length <= 1 || temiDisponibili.size <= 1) && !temaCorrente;
+                    
+                    // Aggiorna le opzioni della listbox tipologie
+                    tipologiaSelect.innerHTML = '';
+                    tipologiaSelect.appendChild(tipologieOriginali[0].cloneNode(true)); // "Tutte le tipologie"
+                    
+                    if (disabilitaTipologie) {
+                        tipologiaSelect.disabled = true;
+                    } else {
+                        tipologiaSelect.disabled = false;
+                        tipologieOriginali.slice(1).forEach(option => {
+                            if (tipologieDisponibili.has(option.value)) {
+                                tipologiaSelect.appendChild(option.cloneNode(true));
+                            }
+                        });
+                    }
+                    tipologiaSelect.value = tipologiaCorrente;
+                    
+                    // Aggiorna le opzioni della listbox temi
+                    temaSelect.innerHTML = '';
+                    temaSelect.appendChild(temiOriginali[0].cloneNode(true)); // "Tutti i temi"
+                    
+                    if (disabilitaTemi) {
+                        temaSelect.disabled = true;
+                    } else {
+                        temaSelect.disabled = false;
+                        temiOriginali.slice(1).forEach(option => {
+                            if (temiDisponibili.has(option.value)) {
+                                temaSelect.appendChild(option.cloneNode(true));
+                            }
+                        });
+                    }
+                    temaSelect.value = temaCorrente;
+                }
+                function aggiornaURL() {
+                    const tipologia = tipologiaSelect.value;
+                    const tema = temaSelect.value;
+                    const urlParams = new URLSearchParams();
+                    
+                    if (tipologia) urlParams.set('tipo', tipologia);
+                    if (tema) urlParams.set('tema', tema);
+                    
+                    const newURL = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+                    window.history.pushState({}, '', newURL);
+                }
+                
+                // Filtra le card in base ai valori correnti
+                function filtraProgetti() {
+                    const tipologia = tipologiaSelect.value;
+                    const tema = temaSelect.value;
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        const categories = card.getAttribute('data-categories')?.split(',') || [];
+                        const tags = card.getAttribute('data-tags')?.split(',') || [];
+                        let show = true;
+                        if (tipologia && !categories.includes(tipologia)) show = false;
+                        if (tema && !tags.includes(tema)) show = false;
+                        card.classList.toggle('hidden', !show);
+                    });
+                }
+                
+                // Event listeners per i cambi
+                tipologiaSelect.addEventListener('change', function() {
+                    aggiornaOpzioniDisponibili();
+                    filtraProgetti();
+                    aggiornaURL();
+                });
+                
+                temaSelect.addEventListener('change', function() {
+                    aggiornaOpzioniDisponibili();
+                    filtraProgetti();
+                    aggiornaURL();
+                });
+                
+                // Gestisce il pulsante back/forward del browser
+                window.addEventListener('popstate', function() {
+                    caricaFiltriDaURL();
+                });
+                
+                // Carica i filtri dall'URL all'avvio
+                caricaFiltriDaURL();
+            });
+            </script>
+    </div>
+{{ end }}

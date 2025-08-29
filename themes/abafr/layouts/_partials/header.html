@@ -1,0 +1,6 @@
+{{ if ne .Page.Kind "home" }}
+  <div class="projects-container">
+    <h1>{{ site.Title }}</h1>
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+{{ end }}

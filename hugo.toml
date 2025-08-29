@@ -1,0 +1,32 @@
+baseURL = 'https://example.org/'
+languageCode = 'it'
+title = "Progetti degli studenti - Accademia di Belle Arti di Frosinone"
+theme = 'abafr'
+
+# Disabilita la generazione delle pagine di tassonomie (categorie e tag)
+disableKinds = ["taxonomy", "term"]
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[params]
+  description = "Raccolta dei progetti di media art degli studenti dell'Accademia di Belle Arti di Frosinone"
+  institution = "Accademia di Belle Arti di Frosinone"
+  institutionUrl = "https://www.accademiabellearti.fr.it/"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Progetti"
+    url = "/projects/"
+    weight = 2
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

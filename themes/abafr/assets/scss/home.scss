@@ -1,0 +1,182 @@
+// Home page SCSS - Complete with all partials
+// ============================================
+
+// Import partials
+@import 'variables';
+@import 'layout';
+@import 'content';
+@import 'navigation';
+
+// Home page specific styles
+// =========================
+
+// Home hero section
+.home-hero {
+  background: linear-gradient(135deg, var(--bg-accent), var(--bg-primary));
+  padding: map-get($spacers, 5) 0;
+  margin-bottom: map-get($spacers, 5);
+  text-align: center;
+  border-bottom: 3px solid var(--primary-color);
+  
+  h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: map-get($spacers, 3);
+    font-weight: 700;
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      font-size: 2.2rem;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.125rem; // Leggermente più piccolo del testo principale
+    color: var(--text-secondary);
+    margin-bottom: map-get($spacers, 4);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-style: italic; // Corsivo per distinguerlo
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: map-get($spacers, 3);
+  }
+}
+
+// Home content
+.projects-container .home-content {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: map-get($spacers, 5); // 3.75rem di margine inferiore
+  
+  p {
+    font-size: 1.25rem; // Aumentato da $font-size-lg per essere più evidente
+    line-height: 1.8;
+    margin-bottom: map-get($spacers, 4);
+    color: var(--text-primary);
+  }
+  
+  strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  
+  // Migliora il pulsante nella home
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: map-get($spacers, 3) map-get($spacers, 4);
+    background: var(--primary-color);
+    color: white;
+    border-radius: $border-radius;
+    display: inline-block;
+    margin-top: map-get($spacers, 3);
+    transition: $transition-base;
+    
+    &:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+    
+    &:visited {
+      color: white; // Mantiene il colore bianco anche se visitato
+      background: var(--primary-color);
+    }
+  }
+}
+
+// Call to action section
+.home-cta {
+  text-align: center;
+  margin: map-get($spacers, 5) 0;
+  padding: map-get($spacers, 4);
+  background: var(--bg-highlight);
+  border-radius: $border-radius-lg;
+  border: 2px solid var(--border-light);
+}
+
+.btn {
+  display: inline-block;
+  padding: map-get($spacers, 3) map-get($spacers, 5);
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: $font-size-lg;
+  transition: $transition-base;
+  border: 2px solid;
+  cursor: pointer;
+  
+  &.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    
+    &:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+  }
+  
+  &:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+}
+
+// Home footer info
+.home-footer {
+  margin-top: map-get($spacers, 5);
+  padding-top: map-get($spacers, 4);
+  border-top: 2px solid var(--border-light);
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  
+  em {
+    font-size: $font-size-sm;
+  }
+}
+
+// Institutional branding
+.institutional-header {
+  background: var(--bg-secondary);
+  padding: map-get($spacers, 2) 0;
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+  
+  .institution-name {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: $font-size-sm;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive adjustments for home
+@media (max-width: map-get($breakpoints, md)) {
+  .home-content {
+    padding: 0 map-get($spacers, 2);
+    
+    p {
+      font-size: $font-size-base;
+    }
+  }
+  
+  .home-cta {
+    margin: map-get($spacers, 4) map-get($spacers, 2);
+    padding: map-get($spacers, 3);
+  }
+  
+  .btn {
+    padding: map-get($spacers, 2) map-get($spacers, 4);
+    font-size: $font-size-base;
+  }
+}

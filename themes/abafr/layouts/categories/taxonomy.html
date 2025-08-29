@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="projects-container">
+    <article class="page-intro">
+        <h1>Tipologie</h1>
+        <p>Esplora i progetti per tipologia artistica. Ogni categoria raggruppa progetti che utilizzano lo stesso medium o approccio creativo.</p>
+    </article>
+
+    <section class="tags-overview">
+        {{ if .Pages }}
+            <div class="tags-grid">
+                {{ range .Pages }}
+                    {{ $categoryCount := len .Pages }}
+                    <div class="tag-card">
+                        <a href="{{ .RelPermalink }}" class="tag-card-link">
+                            <h3>{{ .Title | title }}</h3>
+                            <p class="tag-count">{{ $categoryCount }} {{ if eq $categoryCount 1 }}progetto{{ else }}progetti{{ end }}</p>
+                            
+                            {{ if .Pages }}
+                                <div class="tag-preview">
+                                    {{ range first 3 .Pages }}
+                                        {{ if .Params.copertina }}
+                                            <img src="{{ .RelPermalink }}{{ .Params.copertina }}" alt="{{ .Params.titolo }}" loading="lazy">
+                                        {{ end }}
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+        {{ else }}
+            <div class="no-tags">
+                <p>Non sono state trovate tipologie.</p>
+            </div>
+        {{ end }}
+    </section>
+</div>
+{{ end }}

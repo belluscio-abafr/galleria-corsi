@@ -1,0 +1,68 @@
+{{ define "main" }}
+<!-- Copertina a tutta larghezza -->
+{{ if .Params.copertina }}
+    <div class="project-cover-full">
+        <img src="{{ .Params.copertina }}" 
+             alt="{{ .Params.titolo }}" 
+             class="cover-image-full">
+    </div>
+{{ end }}
+
+<div class="project-single-container">
+    <article class="project-single">
+        <!-- Header con info principali (senza copertina) -->
+        <header class="project-header">
+            <div class="project-meta">
+                <h1 class="project-title">{{ .Params.titolo }}</h1>
+                <p class="project-student">{{ .Params.studente }}</p>
+                {{ if .Params.relatore }}
+                    <p class="project-supervisor">
+                        <strong>Relatore:</strong> {{ .Params.relatore }}
+                    </p>
+                {{ end }}
+                {{ if .Params.correlatore }}
+                    <p class="project-co-supervisor">
+                        <strong>Correlatore:</strong> {{ .Params.correlatore }}
+                    </p>
+                {{ end }}
+                {{ if .Params.professore }}
+                    <p class="project-professor">
+                        <strong>Professore:</strong> {{ .Params.professore }}
+                    </p>
+                {{ end }}
+                {{ if .Params.corso }}
+                    <p class="project-course">
+                        <strong>Corso di studi:</strong> {{ .Params.corso }}
+                    </p>
+                {{ end }}
+                {{ if .Params.anno_accademico }}
+                    <p class="project-year">
+                        <strong>Anno Accademico:</strong> {{ .Params.anno_accademico }}
+                    </p>
+                {{ end }}
+                {{ if .Params.categories }}
+                    <div class="project-tags">
+                        <strong>Tipologia:</strong>
+                        {{ range .Params.categories }}
+                            <a href="/projects/?tipo={{ . | urlize }}" class="tag">{{ . }}</a>
+                        {{ end }}
+                    </div>
+                {{ end }}
+                {{ if .Params.tags }}
+                    <div class="project-tags">
+                        <strong>Temi:</strong>
+                        {{ range .Params.tags }}
+                            <a href="/projects/?tema={{ . | urlize }}" class="tag">{{ . }}</a>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
+        </header>
+
+        <!-- Contenuto del progetto -->
+        <div class="project-content">
+            {{ .Content }}
+        </div>
+    </article>
+</div>
+{{ end }}

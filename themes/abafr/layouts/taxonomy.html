@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div class="projects-container">
+        <article class="page-intro">
+        <h1>Temi</h1>
+        <p>Esplora i progetti per categoria e tecnica utilizzata. Ogni tema raggruppa progetti che condividono approcci, strumenti o tematiche simili.</p>
+    </article>
+
+    <section class="tags-overview">
+        {{ if .Pages }}
+            <div class="tags-grid">
+                {{ range .Pages }}
+                    {{ $tagCount := len .Pages }}
+                    <div class="tag-card">
+                        <a href="{{ .RelPermalink }}" class="tag-card-link">
+                            <h2>{{ .Title | title }}</h2>
+                            <p class="tag-count">{{ $tagCount }} {{ if eq $tagCount 1 }}progetto{{ else }}progetti{{ end }}</p>
+                            
+                            <!-- Anteprima dei primi progetti -->
+                            {{ if .Pages }}
+                                <div class="tag-preview">
+                                    {{ range (first 3 .Pages) }}
+                                        <span class="preview-project">{{ .Params.titolo | default .Title }}</span>
+                                    {{ end }}
+                                    {{ if gt (len .Pages) 3 }}
+                                        <span class="preview-more">e altri...</span>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+        {{ else }}
+                        <div class="no-tags">
+                <p>Non sono stati trovati temi.</p>
+            </div>
+        {{ end }}
+    </section>
+
+    <div class="back-to-projects">
+        <a href="/projects/" class="btn btn-secondary">← Torna all'elenco completo</a>
+    </div>
+</div>
+{{ end }}
