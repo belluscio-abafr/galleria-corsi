@@ -1,6 +1,6 @@
 {{- $sass := "" }}
 {{- $targetPath := "" }}
-{{- if eq .Page.Kind "home" }}
+{{- if .IsHome }}
   {{- $sass = resources.Get "scss/home.scss" }}
   {{- $targetPath = "css/home.css" }}
 {{- else }}
