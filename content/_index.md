@@ -10,5 +10,5 @@ Lo spazio raccoglie progetti innovativi che esplorano le frontiere dell'arte con
 Ogni progetto documenta il percorso formativo e la ricerca artistica degli studenti, evidenziando l'approccio sperimentale e interdisciplinare che caratterizza i corsi dell'Accademia nel campo delle arti digitali e multimediali.
 
 <div class="home-cta">
-    <a href='{{ "projects/" | relURL }}' class="btn btn-primary">Esplora i Progetti</a>
+    <a href="projects/" class="btn btn-primary">Esplora i Progetti</a>
 </div>
