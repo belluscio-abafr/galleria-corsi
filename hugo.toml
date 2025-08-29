@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://belluscio-abafr.github.io/progetti-studenti/'
 languageCode = 'it'
 title = "Progetti degli studenti - Accademia di Belle Arti di Frosinone"
 theme = 'abafr'
