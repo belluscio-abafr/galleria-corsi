@@ -44,7 +44,7 @@
                     <div class="project-tags">
                         <strong>Tipologia:</strong>
                         {{ range .Params.categories }}
-                            <a href="/projects/?tipo={{ . | urlize }}" class="tag">{{ . }}</a>
+                            <a href='{{ printf "projects/?tipo=%s" (. | urlize) | relURL }}' class="tag">{{ . }}</a>
                         {{ end }}
                     </div>
                 {{ end }}
@@ -52,7 +52,7 @@
                     <div class="project-tags">
                         <strong>Temi:</strong>
                         {{ range .Params.tags }}
-                            <a href="/projects/?tema={{ . | urlize }}" class="tag">{{ . }}</a>
+                            <a href='{{ printf "projects/?tema=%s" (. | urlize) | relURL }}' class="tag">{{ . }}</a>
                         {{ end }}
                     </div>
                 {{ end }}
