@@ -2,10 +2,10 @@
 name: Deploy Hugo site to Pages
 
 on:
-  # Esegue su push al branch main
+  # Esegue su push al branch master
   push:
     branches:
-      - main
+      - master
   
   # Permette di eseguire il workflow manualmente dalla tab Actions
   workflow_dispatch:
