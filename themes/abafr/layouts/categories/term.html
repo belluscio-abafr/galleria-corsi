@@ -8,7 +8,7 @@
                 {{ $currentCategory := .Data.Term }}
                 {{ $allCategories := slice }}
                 {{ range site.RegularPages }}
-                    {{ if eq .Section "projects" }}
+                    {{ if eq .Section "progetti" }}
                         {{ range .Params.categories }}
                             {{ $allCategories = $allCategories | append . }}
                         {{ end }}

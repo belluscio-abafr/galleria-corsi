@@ -8,7 +8,7 @@
                 {{ $currentTag := .Data.Term }}
                 {{ $allTags := slice }}
                 {{ range site.Pages }}
-                    {{ if eq .Section "projects" }}
+                    {{ if eq .Section "progetti" }}
                         {{ range .Params.tags }}
                             {{ $allTags = $allTags | append . }}
                         {{ end }}
@@ -48,7 +48,7 @@
         {{ else }}
             <div class="no-projects">
                 <p>Non sono stati trovati progetti per la categoria <strong>{{ .Title | title }}</strong>.</p>
-                <a href='{{ "projects/" | relURL }}' class="btn btn-primary">Torna all'elenco completo</a>
+                <a href='{{ "progetti/" | relURL }}' class="btn btn-primary">Torna all'elenco completo</a>
             </div>
         {{ end }}
     </section>
