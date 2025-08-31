@@ -20,8 +20,8 @@ body {
 
 // Header and footer base styles
 header {
-  padding: map-get($spacers, 3) 0;
-  
+  padding: map-get($spacers, 4) 0 map-get($spacers, 3);
+
   h1 {
     margin: 0 0 map-get($spacers, 2) 0;
     font-size: 1.5rem;
@@ -68,11 +68,11 @@ footer {
 .projects-container {
   max-width: 960px;
   margin: 0 auto;
-  padding: map-get($spacers, 4);
-  margin-bottom: map-get($spacers, 5); // 3.75rem di margine inferiore
+  padding: 0 map-get($spacers, 4) map-get($spacers, 4); 
+  margin-bottom: map-get($spacers, 4); 
   
   @media (max-width: map-get($breakpoints, md)) {
-    padding: map-get($spacers, 3);
+    padding: 0 map-get($spacers, 3) map-get($spacers, 3);
     margin-bottom: map-get($spacers, 5);
   }
 }
@@ -111,8 +111,8 @@ footer {
   padding: 0;
   text-align: left;
   max-width: none;
-  margin: map-get($spacers, 4) 0 map-get($spacers, 5) 0;
-}
+  margin: map-get($spacers, 0) 0 map-get($spacers, 3) 0;  
+} 
 
 // Card layout - More institutional
 .project-card {

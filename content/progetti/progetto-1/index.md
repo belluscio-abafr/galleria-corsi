@@ -3,20 +3,27 @@ titolo: "Sinestesia Urbana"
 studente: "Giulia Rossi"
 descrizione: "Installazione interattiva che trasforma i suoni urbani in giochi di luce, esplorando la percezione multisensoriale."
 copertina: "copertina.jpg"
-categories:
+tipologie:
   - installazione
-tags:
-  - interattivo
+temi:
+  - interazione
+  - ambiente urbano
   - luce
   - suono
-  - percezione
+  - sinestesie
 relatore: "Prof. Marco Bianchi"
 correlatore: "Prof.ssa Anna Verdi"
 corso: "Media Art e Installazioni Multimediali"
 anno_accademico: "2024/2025"
 ---
 
-La città è un organismo vivente, pulsante di suoni, luci e movimenti. "Sinestesia Urbana" nasce dall'osservazione di questi flussi e dalla volontà di renderli tangibili attraverso un'installazione interattiva. Il progetto si compone di una serie di sensori acustici disposti in uno spazio pubblico che catturano i rumori ambientali, dai passi dei passanti al traffico, dai canti degli uccelli alle voci lontane. Questi suoni vengono elaborati in tempo reale da un software che li trasforma in pattern luminosi proiettati su superfici architettoniche. L'obiettivo è stimolare una riflessione sulla percezione multisensoriale e sull'influenza dell'ambiente urbano sul nostro stato emotivo. Il pubblico diventa parte attiva dell'opera, modificando con la propria presenza e i propri suoni la composizione visiva. La ricerca si è concentrata sull'uso di tecnologie open source e materiali sostenibili, con particolare attenzione all'accessibilità e all'inclusione. Il progetto è stato sviluppato durante il corso di Media Art e Installazioni Multimediali, sotto la guida del Prof. Marco Bianchi, e rappresenta un tentativo di avvicinare l'arte digitale alla vita quotidiana, rendendo visibile l'invisibile e invitando a una nuova consapevolezza dello spazio urbano. 
+La città è un organismo vivente che pulsa di suoni, luci e movimenti in costante dialogo sensoriale. "Sinestesia Urbana" nasce dall'osservazione di questi flussi energetici e dalla volontà di renderli tangibili attraverso un'installazione interattiva che trasforma l'invisibile in esperienza condivisibile.
+
+Una rete di sensori acustici distribuiti nello spazio pubblico cattura la complessa partitura sonora urbana: passi cadenzati, traffico incessante, canto degli uccelli, conversazioni che si perdono nella distanza. Questi suoni vengono elaborati in tempo reale da algoritmi che li trasformano in pattern luminosi dinamici, proiettati su superfici architettoniche per creare una "skin digitale" che rivela l'anima sonora della città.
+
+L'installazione stimola una riflessione sulla percezione multisensoriale e sull'influenza dell'ambiente urbano sul nostro stato emotivo. Il pubblico diventa elemento costitutivo dell'opera: ogni movimento modifica la composizione visiva, evidenziando il nostro ruolo di co-creatori dell'ecosistema urbano attraverso un feedback loop che rende visibile l'interconnessione tra presenza fisica e trasformazione spaziale.
+
+La ricerca privilegia tecnologie open source e materiali sostenibili, con particolare attenzione all'accessibilità universale. L'obiettivo è democratizzare l'arte digitale, eliminando barriere e invitando a una nuova consapevolezza dello spazio urbano che abitiamo quotidianamente. 
 
 ## Documentazione visiva
 

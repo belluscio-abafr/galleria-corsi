@@ -3,21 +3,26 @@ titolo: "Eco-Visioni"
 studente: "Sara Conti"
 descrizione: "Un ciclo di videoarte che affronta il tema della sostenibilità ambientale attraverso immagini e suoni evocativi."
 copertina: "copertina.jpg"
-categories:
+tipologie:
   - videoarte
-tags:
+temi:
   - sostenibilità
   - ambiente
+  - ecosistemi
+  - ecologia
   - suono
-  - evocativo
 professore: "Prof. Riccardo De Santis"
 corso: "Videoarte e Ecologia Visiva"
 anno_accademico: "2024/2025"
 ---
 
-"Eco-Visioni" è un progetto di videoarte dedicato alla sensibilizzazione sui temi ambientali. Attraverso una serie di video, la studentessa esplora il rapporto tra uomo e natura, utilizzando immagini e suoni evocativi per stimolare una riflessione sulla sostenibilità. I video sono realizzati con tecniche di montaggio sperimentale, alternando riprese dal vero, animazioni digitali e manipolazioni sonore. 
+"Eco-Visioni" emerge come un progetto di videoarte urgente che affronta le questioni ambientali contemporanee attraverso il potente linguaggio audiovisivo. Il ciclo di opere esplora il rapporto sempre più problematico tra umanità ed ecosistema naturale, utilizzando la sensibilità artistica come strumento di riflessione critica e trasformazione culturale.
 
-L'intento è quello di creare un'esperienza immersiva che coinvolga emotivamente lo spettatore, invitandolo a interrogarsi sul proprio impatto sull'ambiente. Il progetto, sviluppato nel corso di Videoarte e Ecologia Visiva con la guida del Prof. Riccardo De Santis, si propone di promuovere una cultura della responsabilità e del rispetto per il pianeta, utilizzando il linguaggio dell'arte contemporanea per comunicare messaggi di urgenza e speranza.
+Ogni video combina riprese naturalistiche, animazioni digitali e manipolazioni sonore seguendo logiche non-lineari che privilegiano l'impatto emotivo rispetto alla comunicazione didascalica. L'approccio sperimentale del montaggio crea narrazioni visive che permettono allo spettatore di sviluppare una connessione intima con le tematiche ecologiche, partendo dal coinvolgimento estetico per approdare alla consapevolezza ambientale.
+
+L'obiettivo è creare un'esperienza immersiva che coinvolga simultaneamente la sfera emotiva e cognitiva, costruendo un percorso di sensibilizzazione che invita il pubblico a interrogarsi sulle proprie abitudini quotidiane e sui modelli di consumo. Attraverso un linguaggio poetico e non-prescrittivo, il progetto promuove una riflessione profonda sull'impatto individuale e collettivo sull'ambiente.
+
+"Eco-Visioni" si inserisce nella tradizione dell'arte ambientale rinnovandola attraverso l'uso consapevole delle tecnologie digitali, proponendo un modello di produzione artistica che coniuga ricerca estetica e responsabilità ecologica. L'arte contemporanea diventa così veicolo per comunicare messaggi di urgenza climatica temperati da una fondamentale speranza nel potere trasformativo dell'azione collettiva.
 
 ![Nature Footage](img-1.jpg)
 *Riprese naturalistiche utilizzate come materiale di base per i video ambientali*

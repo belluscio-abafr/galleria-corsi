@@ -1,17 +1,19 @@
 {{ define "main" }}
 <div class="projects-container">
     <article class="projects-intro">
+        {{ with .Content }}<div class="projects-intro-content">{{ . }}</div>{{ end }}
         <!-- Filtri con listbox affiancate -->
         <div class="filters-container">
             <!-- Listbox per le tipologie -->
             <div class="categories-filter-select">
-                <label for="tipologia-select">Filtra per tipologia:</label>
                 <select id="tipologia-select" class="tipologia-listbox">
                     <option value="">Tutte le tipologie</option>
                     {{ $allCategories := slice }}
                     {{ range .Pages }}
-                        {{ range .Params.categories }}
-                            {{ $allCategories = $allCategories | append . }}
+                        {{ if .Params.studente }}
+                            {{ range .Params.tipologie }}
+                                {{ $allCategories = $allCategories | append . }}
+                            {{ end }}
                         {{ end }}
                     {{ end }}
                     {{ range ($allCategories | uniq | sort) }}
@@ -22,13 +24,14 @@
 
             <!-- Listbox per i temi -->
             <div class="tags-filter-select">
-                <label for="tema-select">Filtra per tema:</label>
                 <select id="tema-select" class="tema-listbox">
                     <option value="">Tutti i temi</option>
                     {{ $allTags := slice }}
                     {{ range .Pages }}
-                        {{ range .Params.tags }}
-                            {{ $allTags = $allTags | append . }}
+                        {{ if .Params.studente }}
+                            {{ range .Params.temi }}
+                                {{ $allTags = $allTags | append . }}
+                            {{ end }}
                         {{ end }}
                     {{ end }}
                     {{ range ($allTags | uniq | sort) }}
@@ -44,8 +47,8 @@
             {{ if .Params.studente }}
                     <div class="project-card" 
                          data-slug="{{ .File.BaseFileName }}"
-                         data-categories="{{ delimit .Params.categories "," }}"
-                         data-tags="{{ delimit .Params.tags "," }}">
+                         data-categories="{{ delimit .Params.tipologie "," }}"
+                         data-tags="{{ delimit .Params.temi "," }}">
                 <a href="{{ .RelPermalink }}" class="project-link">
                     {{ if .Params.copertina }}
                         <div class="project-image">

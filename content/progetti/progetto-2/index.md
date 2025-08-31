@@ -3,9 +3,9 @@ titolo: "Memorie Digitali"
 studente: "Luca Ferri"
 descrizione: "Un progetto fotografico che esplora la memoria personale attraverso immagini manipolate digitalmente."
 copertina: "copertina.jpg"
-categories:
+tipologie:
   - fotografia
-tags:
+temi:
   - digitale
   - memoria
   - emozioni
@@ -16,7 +16,13 @@ anno_accademico: "2024/2025"
 ---
 
 
-"Memorie Digitali" è un viaggio nell'universo delle emozioni e dei ricordi, tradotti in immagini fotografiche manipolate digitalmente. Il progetto nasce dalla necessità di dare forma visiva a sensazioni spesso difficili da esprimere a parole. Attraverso la sovrapposizione di texture, colori e frammenti di fotografie d'archivio, ogni opera diventa una narrazione personale, un diario visivo che racconta momenti di gioia, nostalgia, paura e speranza. La manipolazione digitale permette di superare i limiti della fotografia tradizionale, aprendo nuove possibilità espressive e creative. Il lavoro è stato realizzato con software open source e stampato su materiali riciclati, in linea con una visione sostenibile dell'arte. Il progetto è stato sviluppato nel corso di Fotografia e Arte Digitale, sotto la supervisione della Prof.ssa Elena Verdi, e si propone di stimolare una riflessione sul rapporto tra memoria, identità e tecnologia, invitando lo spettatore a riconoscere frammenti della propria storia nelle immagini esposte.
+"Memorie Digitali" esplora l'universo emotivo contemporaneo attraverso un linguaggio fotografico che fonde tradizione e sperimentazione digitale. Il progetto nasce dall'urgenza di dare forma visiva a sensazioni complesse, utilizzando l'immagine come veicolo per comunicare l'invisibile emotivo che caratterizza la nostra epoca.
+
+Il processo creativo si basa sulla stratificazione di texture, palette cromatiche e frammenti di fotografie d'archivio personali e collettive, generando narrazioni multistrato che si rivelano progressivamente. Ogni immagine diventa un diario visivo capace di raccontare momenti esistenziali: gioia spontanea, malinconia nostalgica, paura inquietante e forza propulsiva della speranza.
+
+La manipolazione digitale supera i confini tradizionali del medium fotografico, aprendo territori inesplorati di possibilità espressive. L'utilizzo di software open source abbraccia una filosofia democratica degli strumenti creativi, mentre i supporti di stampa ricavati da materiali riciclati manifestano un impegno verso pratiche artistiche sostenibili.
+
+L'obiettivo è stimolare una riflessione sul rapporto tra memoria individuale, costruzione identitaria e mediazione tecnologica. Ogni immagine invita lo spettatore a un viaggio introspettivo, riconoscendo frammenti della propria storia emotiva nelle narrazioni proposte e scoprendo nuove connessioni tra esperienza personale e rappresentazione artistica contemporanea.
 
 
 ![Vintage Photo Archive](img-1.jpg)

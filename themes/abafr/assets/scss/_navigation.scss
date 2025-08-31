@@ -55,7 +55,7 @@ nav {
   
   strong {
     color: var(--text-primary);
-    margin-right: map-get($spacers, 2);
+    margin-right: map-get($spacers, 1);  
     font-weight: 700;
     line-height: 1;
   }
@@ -363,7 +363,7 @@ a {
 
 // Container per i filtri affiancati
 .filters-container {
-  display: flex;
+  display: flex; 
   gap: map-get($spacers, 4);
   margin-bottom: map-get($spacers, 4);
   

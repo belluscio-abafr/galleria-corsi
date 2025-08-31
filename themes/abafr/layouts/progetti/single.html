@@ -40,18 +40,18 @@
                         <strong>Anno Accademico:</strong> {{ .Params.anno_accademico }}
                     </p>
                 {{ end }}
-                {{ if .Params.categories }}
+                {{ if .Params.tipologie }}
                     <div class="project-tags">
                         <strong>Tipologia:</strong>
-                        {{ range .Params.categories }}
+                        {{ range .Params.tipologie }}
                             <a href='{{ printf "progetti/?tipo=%s" (. | urlize) | relURL }}' class="tag">{{ . }}</a>
                         {{ end }}
                     </div>
                 {{ end }}
-                {{ if .Params.tags }}
+                {{ if .Params.temi }}
                     <div class="project-tags">
                         <strong>Temi:</strong>
-                        {{ range .Params.tags }}
+                        {{ range .Params.temi }}
                             <a href='{{ printf "progetti/?tema=%s" (. | urlize) | relURL }}' class="tag">{{ . }}</a>
                         {{ end }}
                     </div>

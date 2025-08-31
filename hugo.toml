@@ -23,7 +23,7 @@ disableKinds = ["taxonomy", "term"]
     weight = 1
   [[menu.main]]
     name = "Progetti"
-    url = "/projects/"
+    url = "/progetti/"
     weight = 2
 
 [markup]
