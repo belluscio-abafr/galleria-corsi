@@ -50,23 +50,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.project-student {
+  font-size: $font-size-lg; // Dimensione del testo normale (come il contenuto)
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: map-get($spacers, 5); // Aumentato ulteriormente per maggiore separazione
+}
+
 // Project card content
 .project-card {
   .project-title {
     font-size: 1.4rem;
     font-weight: bold;
     margin-top: 0;
-    margin-bottom: map-get($spacers, 1); 
+    margin-bottom: map-get($spacers, 0); 
     color: var(--secondary-color);
     text-align: left;
   }
-}
-
-.project-student {
-  font-size: $font-size-lg; // Dimensione del testo normale (come il contenuto)
-  color: var(--text-primary);
-  margin-top: 0;
-  margin-bottom: map-get($spacers, 5); // Aumentato ulteriormente per maggiore separazione
+  .project-student {  
+    margin-bottom: map-get($spacers, 2); // Aumentato ulteriormente per maggiore separazione
+  } 
 }
 
 .project-description {
