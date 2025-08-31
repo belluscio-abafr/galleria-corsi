@@ -1,5 +1,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ site.Title }}{{ else if and .Params.titolo .Params.studente }}{{ printf "%s - %s | %s" .Params.titolo .Params.studente site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+{{- /* Meta tag SEO e Social Media */ -}}
+{{ partial "head/seo.html" . }}
+
 {{ partial "head/css.html" . }}
 {{ partial "head/js.html" . }}

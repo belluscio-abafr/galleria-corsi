@@ -25,8 +25,6 @@ L'installazione stimola una riflessione sulla percezione multisensoriale e sull'
 
 La ricerca privilegia tecnologie open source e materiali sostenibili, con particolare attenzione all'accessibilità universale. L'obiettivo è democratizzare l'arte digitale, eliminando barriere e invitando a una nuova consapevolezza dello spazio urbano che abitiamo quotidianamente. 
 
-## Documentazione visiva
-
 ![Sound Visualization](img-1.jpg)
 *Visualizzazione in tempo reale delle onde sonore catturate dai sensori acustici urbani*
 
