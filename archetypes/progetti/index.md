@@ -24,7 +24,7 @@ Presentazione di un minimo di 1500 battute eventualmente suddiviso in più parag
 
 Concentrarsi sulle tematiche trattate. I dettagli tecnici possono essere indicati meglio nelle didascalie delle immagini seguenti (almeno 3 e non più di 6, di almeno 1920x1080px).
 
-Per questo e per gli altri campi. si possono vedere i sorgenti nelle sottocartelle di "content" nel repository GitHub [belluscio-abafr/selezione-tesi](https://github.com/belluscio-abafr/selezione-tesi) e sul sito [Selezione di tesi dell'Acccademia di Frosinone](https://belluscio-abafr.github.io/selezione-tesi/)
+Per questo e per gli altri campi. si possono vedere i sorgenti nelle sottocartelle di "content" nel repository GitHub [belluscio-abafr/galleria-corsi](https://github.com/belluscio-abafr/galleria-corsi) e sul sito [Galleria corsi dell'Accademia di Frosinone](https://belluscio-abafr.github.io/galleria-corsi/)
 
 
 ![Breve descrizione del contenuto dell'immagine](nome-del-file-nella-cartella.jpg)

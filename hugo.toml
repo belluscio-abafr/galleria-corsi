@@ -1,6 +1,6 @@
-baseURL = 'https://belluscio-abafr.github.io/selezione-tesi/'
+baseURL = 'https://belluscio-abafr.github.io/galleria-corsi/'
 languageCode = 'it'
-title = "Selezione Tesi di Media Art - Accademia di Belle Arti di Frosinone"
+title = "Galleria Corsi di Media Art - Accademia di Belle Arti di Frosinone"
 theme = 'abafr'
 
 # Disabilita la generazione delle pagine di tassonomie (categorie e tag)
@@ -12,7 +12,7 @@ disableKinds = ["taxonomy", "term"]
   section = ["HTML", "RSS"]
 
 [params]
-  description = "Selezione delle migliori tesi e progetti di media art degli studenti dell'Accademia di Belle Arti di Frosinone"
+  description = "Galleria dei migliori progetti di tesi e di corso di media art degli studenti dell'Accademia di Belle Arti di Frosinone"
   institution = "Accademia di Belle Arti di Frosinone"
   institutionUrl = "https://www.accademiabellearti.fr.it/"
 
