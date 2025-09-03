@@ -41,7 +41,9 @@
             </div>
         </div>
     </article>
+</div>
 
+<div class="projects-grid-container">
     <section class="projects-grid">
         {{ range .Pages.ByDate.Reverse }}
             {{ if .Params.studente }}
@@ -219,5 +221,6 @@
                 caricaFiltriDaURL();
             });
             </script>
-    </div>
+    </section>
+</div>
 {{ end }}

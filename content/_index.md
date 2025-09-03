@@ -1,15 +1,12 @@
 ---
-title: "Galleria Corsi di Media Art"
-description: "Portfolio dei migliori progetti di tesi e di corso di media art degli studenti dell'Accademia di Belle Arti di Frosinone"
+istituzione: Accademia di Belle Arti di Frosinone
+title: "Galleria dei progetti dei corsi"
+description: "Selezione di progetti di corso e di tesi dell'Accademia di Belle Arti di Frosinone"
 ---
 
-Questa è una galleria curata dei migliori progetti di Media Art realizzati dagli studenti dell'Accademia di Belle Arti di Frosinone, una vetrina digitale dedicata alle opere e alle sperimentazioni artistiche più significative, sia nell'ambito delle tesi di laurea che nei progetti sviluppati durante i corsi.
+Questa galleria digitale raccoglie una selezione dei migliori progetti realizzati dagli studenti dell'Accademia di Belle Arti di Frosinone, documentando il percorso formativo attraverso elaborati di tesi e progetti sviluppati nei corsi di studio.
 
-*La raccolta include progetti sviluppati in singoli corsi di Media Art e tesi di laurea, offrendo una panoramica completa del percorso formativo degli studenti.*
-
-Lo spazio raccoglie progetti innovativi che esplorano le frontiere dell'arte contemporanea attraverso l'uso creativo delle nuove tecnologie, dalle installazioni interattive alla videoarte, dalla fotografia digitale alle performance multimediali.
-
-Ogni progetto documenta il percorso formativo e la ricerca artistica degli studenti, evidenziando l'approccio sperimentale e interdisciplinare che caratterizza i corsi dell'Accademia nel campo delle arti digitali e multimediali.
+La collezione attualmente presenta progetti dell'area di Media Art, ma il sistema è progettato per essere facilmente esteso ad altri corsi di studio dell'Accademia, offrendo una panoramica completa dell'offerta formativa e della qualità della ricerca artistica dell'istituzione.
 
 <div class="home-cta">
     <a href="progetti/" class="btn btn-primary">Esplora la Galleria</a>

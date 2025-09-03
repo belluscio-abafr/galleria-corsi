@@ -1,6 +1,6 @@
 baseURL = 'https://belluscio-abafr.github.io/galleria-corsi/'
 languageCode = 'it'
-title = "Galleria Corsi di Media Art - Accademia di Belle Arti di Frosinone"
+title = "Galleria dei corsi dell'Accademia di Belle Arti di Frosinone"
 theme = 'abafr'
 
 # Disabilita la generazione delle pagine di tassonomie (categorie e tag)

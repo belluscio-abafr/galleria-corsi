@@ -12,15 +12,25 @@
 
 // Home hero section
 .home-hero {
-  background: linear-gradient(135deg, var(--bg-accent), var(--bg-primary));
-  padding: map-get($spacers, 5) 0;
-  margin-bottom: map-get($spacers, 5);
-  text-align: center;
-  border-bottom: 3px solid var(--primary-color);
-  
+  margin-bottom: 3.75rem;
+
+  .institution {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    // margin-bottom: map-get($spacers, 4);
+    // margin-bottom: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-style: normal; // Rimozione corsivo per look più istituzionale
+    // padding-bottom: map-get($spacers, 3);
+  }
+
   h1 {
     font-size: 3rem;
     color: var(--secondary-color);
+    margin-top: map-get($spacers, 3);
     margin-bottom: map-get($spacers, 3);
     font-weight: 700;
     
@@ -28,24 +38,11 @@
       font-size: 2.2rem;
     }
   }
-  
-  .subtitle {
-    font-size: 1.125rem; // Leggermente più piccolo del testo principale
-    color: var(--text-secondary);
-    margin-bottom: map-get($spacers, 4);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-    font-style: italic; // Corsivo per distinguerlo
-    border-bottom: 1px solid var(--border-light);
-    padding-bottom: map-get($spacers, 3);
-  }
 }
 
 // Home content
 .projects-container .home-content {
-  max-width: 960px;
+  max-width: 800px; // Ridotto da 960px per i contenuti testuali
   margin: 0 auto;
   margin-bottom: map-get($spacers, 5); // 3.75rem di margine inferiore
   
@@ -89,12 +86,11 @@
 
 // Call to action section
 .home-cta {
-  text-align: center;
-  margin: map-get($spacers, 5) 0;
-  padding: map-get($spacers, 4);
-  background: var(--bg-highlight);
-  border-radius: $border-radius-lg;
-  border: 2px solid var(--border-light);
+  //text-align: center;
+  //margin: map-get($spacers, 3) 0;
+  margin-top: map-get($spacers, 5);
+  //padding: map-get($spacers, 4);
+  background: var(--bg-primary); // Sfondo neutro invece dell'highlight
 }
 
 .btn {
@@ -131,13 +127,13 @@
 .home-footer {
   margin-top: map-get($spacers, 5);
   padding-top: map-get($spacers, 4);
-  border-top: 2px solid var(--border-light);
   text-align: center;
   color: var(--text-muted);
-  font-style: italic;
+  font-style: normal; // Rimozione corsivo per look più istituzionale
   
   em {
     font-size: $font-size-sm;
+    font-style: normal; // Rimozione corsivo
   }
 }
 

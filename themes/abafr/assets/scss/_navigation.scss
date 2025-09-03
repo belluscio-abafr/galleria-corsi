@@ -365,7 +365,7 @@ a {
 .filters-container {
   display: flex; 
   gap: map-get($spacers, 4);
-  margin-bottom: map-get($spacers, 4);
+  margin-bottom: - map-get($spacers, 2);
   
   @media (max-width: map-get($breakpoints, md)) {
     flex-direction: column;
