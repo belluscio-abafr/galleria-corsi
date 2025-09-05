@@ -18,7 +18,7 @@ disableKinds = ["taxonomy", "term"]
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    name = "Presentazione"
     url = "/"
     weight = 1
   [[menu.main]]

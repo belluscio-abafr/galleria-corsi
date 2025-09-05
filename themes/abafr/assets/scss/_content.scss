@@ -40,9 +40,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-title {
   font-size: 2.5rem;
-  font-weight: 600; // Aumentato il peso del font
+  font-weight: 700; 
   color: var(--secondary-color);
-  margin-bottom: map-get($spacers, 2);
+  margin-bottom: map-get($spacers, 1);
   text-align: left;
   
   @media (max-width: map-get($breakpoints, md)) {
@@ -86,8 +86,8 @@ h1, h2, h3, h4, h5, h6 {
 .project-professor,
 .project-course,
 .project-year {
-  margin-top: map-get($spacers, 2);  
-  margin-bottom: map-get($spacers, 1); // Ridotto per spacing normale tra righe
+  margin-top: map-get($spacers, 1);
+  margin-bottom: map-get($spacers, 0); // Ridotto per spacing normale tra righe
   font-size: $font-size-lg; // Stessa dimensione del contenuto
   color: var(--text-primary);
   line-height: 1.7; // Stessa interlinea del contenuto normale
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   strong { 
     margin-right: map-get($spacers, 1); 
     color: var(--text-primary);
-    font-weight: bold; // Ripristinato il grassetto per le etichette
+    font-weight: 600; 
   }
 }
 

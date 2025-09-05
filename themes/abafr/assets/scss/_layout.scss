@@ -137,7 +137,7 @@ footer {
   
   @media (max-width: map-get($breakpoints, md)) {
     padding: 0 map-get($spacers, 3) map-get($spacers, 3);
-    margin-bottom: map-get($spacers, 5);
+    // margin-bottom: map-get($spacers, 5);
   }
 }
 
