@@ -368,6 +368,10 @@ a {
   margin-bottom: - map-get($spacers, 2);
   
   @media (max-width: map-get($breakpoints, md)) {
+    gap: map-get($spacers, 3);
+  }
+  
+  @media (max-width: 600px) {
     flex-direction: column;
     gap: map-get($spacers, 3);
   }
