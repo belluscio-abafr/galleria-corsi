@@ -16,6 +16,14 @@ body {
   padding: 0;
   transition: $transition-base;
   overflow-x: hidden; // Previene scrollbar orizzontale
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Main content area - grows to fill available space
+main {
+  flex: 1;
 }
 
 // Header and footer base styles
@@ -36,11 +44,55 @@ footer {
   border-top: 1px solid var(--border-light);
   background: var(--bg-secondary);
   
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: map-get($spacers, 3);
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  .footer-left {
+    flex: 1;
+    
+    @media (max-width: 768px) {
+      margin-bottom: map-get($spacers, 2);
+    }
+  }
+  
+  .footer-right {
+    flex-shrink: 0;
+  }
+  
   p {
-    margin: 0;
+    margin: 0 0 map-get($spacers, 1) 0;
     color: var(--text-muted);
     font-size: $font-size-sm;
-    text-align: center;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &.license,
+    &.repository {
+      margin-top: map-get($spacers, 1);
+      
+      a {
+        color: var(--text-muted);
+        text-decoration: none;
+        
+        &:hover {
+          color: var(--primary-color);
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 
