@@ -45,7 +45,9 @@
 
 <div class="projects-grid-container">
     <section class="projects-grid">
-        {{ range .Pages.ByDate.Reverse }}
+        {{/*  {{ range .Pages.ByDate.Reverse }}  */}}
+        {{/*  {{ range .Pages.ByParam "titolo" }}  */}}
+        {{ range .Pages.ByDate }}
             {{ if .Params.studente }}
                     <div class="project-card" 
                          data-slug="{{ .File.BaseFileName }}"

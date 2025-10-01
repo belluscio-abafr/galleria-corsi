@@ -1,5 +1,5 @@
 ---
-titolo: "Sinestesia Urbana"
+titolo: "Sinestesia Urbana *"
 studente: "Giulia Rossi"
 descrizione: "Installazione interattiva che trasforma i suoni urbani in giochi di luce, esplorando la percezione multisensoriale."
 copertina: "copertina.jpg"

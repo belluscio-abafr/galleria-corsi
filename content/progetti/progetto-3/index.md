@@ -1,5 +1,5 @@
 ---
-titolo: "Materia Eterea"
+titolo: "Materia Eterea *"
 studente: "Alessandro Greco"
 descrizione: "Sculture cinetiche che utilizzano luce e materiali trasparenti per creare effetti eterei e mutevoli."
 copertina: "copertina.jpg"

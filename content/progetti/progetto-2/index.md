@@ -1,5 +1,5 @@
 ---
-titolo: "Memorie Digitali"
+titolo: "Memorie Digitali *"
 studente: "Luca Ferri"
 descrizione: "Un progetto fotografico che esplora la memoria personale attraverso immagini manipolate digitalmente."
 copertina: "copertina.jpg"

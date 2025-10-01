@@ -1,0 +1,141 @@
+// Lightbox styles - Essential design
+// ===================================
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none;
+  cursor: pointer;
+  
+  &.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 95%;
+  max-height: 95%;
+  cursor: auto;
+  
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: $border-radius;
+    box-shadow: var(--shadow-heavy);
+  }
+}
+
+.lightbox-controls {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 100;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  user-select: none;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+  
+  &.prev {
+    left: 0;
+    padding-right: 8px;
+  }
+  
+  &.next {
+    right: 0;
+    padding-left: 8px;
+  }
+  
+  &.disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.3);
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 100;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  user-select: none;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// Indicate clickable images
+.project-content img {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// Auto-hide controls when mouse is inactive
+.lightbox.hide-controls {
+  .lightbox-controls,
+  .lightbox-close {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+// Prevent scrolling when lightbox is open
+body.lightbox-open {
+  overflow: hidden;
+}

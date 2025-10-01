@@ -1,5 +1,5 @@
 ---
-titolo: "Corpi in Rete"
+titolo: "Corpi in Rete *"
 studente: "Martina Esposito"
 descrizione: "Una serie di performance che indagano il rapporto tra corpo, identità e tecnologia nei social media."
 copertina: "copertina.jpg"

@@ -1,5 +1,5 @@
 ---
-titolo: "Eco-Visioni"
+titolo: "Eco-Visioni *"
 studente: "Sara Conti"
 descrizione: "Un ciclo di videoarte che affronta il tema della sostenibilità ambientale attraverso immagini e suoni evocativi."
 copertina: "copertina.jpg"
