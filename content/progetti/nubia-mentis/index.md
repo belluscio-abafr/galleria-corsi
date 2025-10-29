@@ -16,7 +16,7 @@ temi:
   - suono
   - colore
   - linguaggio sensoriale
-  - partecipazione del pubblico
+  - partecipazione
 ---
 
 
