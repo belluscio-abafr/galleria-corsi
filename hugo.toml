@@ -1,7 +1,7 @@
 baseURL = 'https://belluscio-abafr.github.io/galleria-corsi/'
 languageCode = 'it'
 title = "Galleria dei corsi dell'Accademia di Belle Arti di Frosinone"
-theme = 'abafr'
+theme = 'abafr-tmp'
 
 # Disabilita la generazione delle pagine di tassonomie (categorie e tag)
 disableKinds = ["taxonomy", "term"]

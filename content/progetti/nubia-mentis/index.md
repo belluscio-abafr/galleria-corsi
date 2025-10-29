@@ -8,6 +8,7 @@ anno_accademico: 2024/2025
 copertina: Felicità-2.jpeg
 descrizione: "Tre nuvole che uniscono luce, suono ed emozione: ogni nuvola riflette uno stato d'animo e lo spettatore è invitato a sostare sotto quella che più lo rappresenta."
 tipologie:
+  - (progetti reali)
   - installazione
 temi:
   - emozioni

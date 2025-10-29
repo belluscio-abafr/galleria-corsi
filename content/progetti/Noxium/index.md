@@ -1,14 +1,15 @@
 ---
 titolo: Noxium
 studente: Chiara Faustini
-relatore: Riccardo Bernardi
-correlatore: Giovanni Verga
+relatore: Prof. Riccardo Bernardi
+correlatore: Prof. Giovanni Verga
 professore: 
 corso: Media Art
 anno_accademico: 2023/2024
 copertina: copertina.jpg
 descrizione: Installazione immersiva che genera mondi onirici tramite AI, adattandosi in tempo reale ai dati biometrici dell'utente.
 tipologie:
+  - (progetti reali)
   - installazione interattiva
   - realtà virtuale
   - arte generativa

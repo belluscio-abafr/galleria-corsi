@@ -17,7 +17,7 @@
                         {{ end }}
                     {{ end }}
                     {{ range ($allCategories | uniq | sort) }}
-                            <option value="{{ . }}">{{ . | title }}</option>
+                            <option value="{{ . }}">{{ . }}</option>
                     {{ end }}
                 </select>
             </div>
@@ -35,7 +35,7 @@
                         {{ end }}
                     {{ end }}
                     {{ range ($allTags | uniq | sort) }}
-                            <option value="{{ . }}">{{ . | title }}</option>
+                            <option value="{{ . }}">{{ . }}</option>
                     {{ end }}
                 </select>
             </div>
