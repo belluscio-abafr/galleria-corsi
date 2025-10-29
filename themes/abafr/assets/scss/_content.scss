@@ -124,6 +124,10 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: contain; 
     margin: map-get($spacers, 4) 0 map-get($spacers, 2); 
   }
+
+  img + img {
+    margin-top: map-get($spacers, 2); 
+  }
   
   img + em {
     display: block;
