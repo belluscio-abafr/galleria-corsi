@@ -25,7 +25,7 @@ Il funzionamento generale dell’opera si basa sull’interazione tra LED e suon
 ![Rappresentazione dell'ansia](Ansia.jpeg)
 *Ansia espressa tramite luci, suoni e  colori come il rosso e il viola.*
 
-![Rappresentazione dell'ansia](Ansia..jpeg)
+![Rappresentazione dell'ansia](Ansia-2.jpeg)
 ![Rappresentazione dell'ansia](Ansia_filtroLivelli.jpg)
 *[ritoccato con filtro "Livelli"]*
 
@@ -37,4 +37,4 @@ Il funzionamento generale dell’opera si basa sull’interazione tra LED e suon
 ![Rappresentazione della felicità](Felicità.jpeg)
 *Felicità espressa tramite luci, suoni e varie sfumature dal bianco al giallo.*
 
-![Rappresentazione della felicità](Felicità..jpeg) 
+![Rappresentazione della felicità](Felicità-2.jpeg) 
