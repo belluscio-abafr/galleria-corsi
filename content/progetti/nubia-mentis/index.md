@@ -35,7 +35,7 @@ Il funzionamento generale dell'opera si basa sull'interazione tra LED e suoni: i
 *Tristezza espressa tramite luci, suoni e varie sfumature del blu.*
 
 ![Rappresentazione della tristezza e della felicità](Tristezza_e_felicità.jpeg)
-*?????*
+*Tristezza e felicità poste l'una vicino all'altra per evidenziare le differenze con luci, suoni e sfumature di colore.*
 
 ![Rappresentazione della felicità](Felicità.jpeg)
 *Felicità espressa tramite luci, suoni e varie sfumature dal bianco al giallo.*
