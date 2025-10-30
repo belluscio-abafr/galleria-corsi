@@ -5,16 +5,18 @@ relatore: Prof. Riccardo Bernardi
 correlatore: Prof. Giovanni Verga
 professore: ""
 corso: Media Art
-anno_accademico: ad esempio "2023/2024"
+anno_accademico: "2023/2024"
 copertina: battitocardiaco-mano.jpg
-descrizione: testo sintetico che apparirà nei motori di ricerca e nelle anteprime dei social e della pagina dei progetti (fra 70 e 160 battute, spazi inclusi)
+descrizione: Opera immersiva che esplora il dialogo tra il caos e l'ordine emotivo trasformando emozioni e dati biometrici in esperienza sensoriale visive e uditive.
 tipologie:
   - (progetti reali)
   - installazione
+  - arte generativa
 temi:
-  - caos e ordine
+  - caos e ordine emotivo
   - emozioni
   - biofeedback
+  - attrattore di Lorenz
 ---
 
 Enantios è un'opera immersiva che nasce dall'incontro tra arte, scienza e tecnologia. Il progetto esplora il rapporto tra due forze opposte: caos ed ordine, indagando come le complessità emotive, spesso percepite come caotiche, possano trasformarsi in un percorso di scoperta di un ordine interiore.
@@ -37,4 +39,4 @@ Il flusso sonoro, composto da tre eventi spazializzati in Reaper, e la visualizz
 ![visualizazione ferma del sistema](1.jpg)
 ![fase caotica del sistema](2.jpg)
 ![fase ordine del sistema](3.jpg)
-*???*
+*Visualizzazione delle fasi del sistema.*
