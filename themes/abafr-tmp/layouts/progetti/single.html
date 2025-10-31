@@ -44,7 +44,8 @@
                     <div class="project-tags">
                         <strong>Tipologia:</strong>
                         {{ range .Params.tipologie }}
-                            <a href='{{ printf "progetti/?tipo=%s" (. | urlize) | relURL }}' class="tag">{{ . }}</a>
+                            {{/*  <a href='{{ printf "progetti/?tipo=%s" ((replace . " " "+") | urlize) | relURL }}' class="tag">{{ . }}</a>  */}}
+                            <a href='{{ printf "progetti/?tipo=%s" (replace . " " "+") | relURL }}' class="tag">{{ . }}</a>
                         {{ end }}
                     </div>
                 {{ end }}
@@ -52,7 +53,7 @@
                     <div class="project-tags">
                         <strong>Temi:</strong>
                         {{ range .Params.temi }}
-                            <a href='{{ printf "progetti/?tema=%s" (. | urlize) | relURL }}' class="tag">{{ . }}</a>
+                            <a href='{{ printf "progetti/?tema=%s" (replace . " " "+") | relURL }}' class="tag">{{ . }}</a>
                         {{ end }}
                     </div>
                 {{ end }}

@@ -27,7 +27,7 @@ L'installazione utilizza due sensori biometrici: un sensore GSR (Galvanic Skin R
 
 Le immagini vengono generate in tempo reale tramite Stream Diffusion, un modello di intelligenza artificiale che trasforma prompt testuali basati sugli archetipi in visioni oniriche. Parallelamente, paesaggi sonori binaurali creati attraverso field recording e sintesi audio accompagnano l'esperienza, con suoni che si spazializzano in 3D seguendo i movimenti del visore VR.
 
-*TouchDesigner funge da cervello centrale del sistema, integrando i flussi di dati dai sensori, gestendo la generazione delle immagini e coordinando l'audio spaziale. I valori GSR tra 0-500 attivano i prompt positivi, mentre valori tra 501-1023 selezionano gli incubi. Le onde cerebrali EEG influenzano invece parametri come la nitidezza e lo stile delle immagini generate.*
+TouchDesigner funge da cervello centrale del sistema, integrando i flussi di dati dai sensori, gestendo la generazione delle immagini e coordinando l'audio spaziale. I valori GSR tra 0-500 attivano i prompt positivi, mentre valori tra 501-1023 selezionano gli incubi. Le onde cerebrali EEG influenzano invece parametri come la nitidezza e lo stile delle immagini generate.
 
 Noxium rappresenta una fusione tra arte digitale e psicologia analitica, offrendo non solo un'esperienza estetica ma anche uno strumento di esplorazione interiore. Il progetto dimostra come la tecnologia possa diventare un ponte verso l'inconscio, trasformando dati fisiologici in narrazioni visive e sonore profondamente personali.
 
